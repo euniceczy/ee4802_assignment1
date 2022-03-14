@@ -49,7 +49,7 @@ st.write('Selected Lease Year is ', selected_lease)
 predict_button=0
 st.write('Predict HDB Resale Price for ', selected_yymm, "period, ", selected_town, " ", selected_fa, "SQM, ", selected_flat_type," ",selected_flat_model," ",selected_storey_range, "storey ", selected_lease, "lease")
 if st.button('Predict'):
-    st.write('Predicted HDB Resale Price is: ')
+#     st.write('Predicted HDB Resale Price is: ')
     predict_button=1;
 
 trim_data = df2.drop(["block", "street_name", "remaining_lease"], axis=1)
@@ -125,6 +125,7 @@ input[49] = selected_fa #set floor area to 80 sqm
 input[50] = selected_lease #set lease commencement to 2001
 print("Estimated resale price (linear regression)=> ", lr.predict([input]))
 if predict_button==1:
+    st.success("Success!")
     st.write('The estimate is ', lr.predict([input]))
     predict_button=0
 
