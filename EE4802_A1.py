@@ -3,7 +3,8 @@ import pandas as pd
 import streamlit as st
 
 #LOAD DATA...
-df2 = pd.read_csv("/resale_flat_prices_based_on_registration_date_from_jan_2017_onwards.csv")
+#df2 = pd.read_csv("/resale_flat_prices_based_on_registration_date_from_jan_2017_onwards.csv")
+df2 = pd.read_csv('https://raw.githubusercontent.com/euniceczy/ee4802_assignment1/resale_flat_prices_based_on_registration_date_from_jan_2017_onwards.csv')
 
 #TITLE
 st.title("EE4802 Assignment 1 HDB Price Prediction")
