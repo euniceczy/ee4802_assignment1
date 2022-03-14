@@ -10,7 +10,7 @@ df2 = pd.read_csv('https://raw.githubusercontent.com/euniceczy/ee4802_assignment
 st.title("EE4802 Assignment 1 HDB Price Prediction")
 
 #SELECTED SELLING YY-MM
-selected_yymm = st.text_input('Type in Selling Month in YYYY-MM format')
+selected_yymm = st.text_input('Type in Selling Month in YYYY-MM format','2017-01')
 st.write('Selected Time Period is', selected_yymm)
 
 #SELECTED TOWN
@@ -19,7 +19,7 @@ selected_town = st.selectbox("Select Town for prediction", towns)
 st.write('Selected Town is ', selected_town)
 
 #SELECTED FA
-selected_fa = st.number_input('Floor Area in Sqm')
+selected_fa = st.number_input('Floor Area in Sqm',100.00)
 st.write('Selected Floor Area in SQM is ', selected_fa)
 # st.write('Predicting for ', selected_town, 'with ', selected_fa, 'SQM ...')
 
