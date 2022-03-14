@@ -125,9 +125,13 @@ input[49] = selected_fa #set floor area to 80 sqm
 input[50] = selected_lease #set lease commencement to 2001
 print("Estimated resale price (linear regression)=> ", lr.predict([input]))
 if predict_button==1:
-    st.success("Success!")
-    st.write('The estimate is ', lr.predict([input]))
-    predict_button=0
+      st.success("Success!")
+      estimated_price = lr.predict([input])
+      estimated_price = estimated_price[0]
+      st.write('The estimate is ', estimated_price)
+#     st.success("Success!")
+#     st.write('The estimate is ', lr.predict([input]))
+#     predict_button=0
 
 # col_name = ["month","type","storey","AMK","BED","BIS","BBT","BMH","BPJ",
 #  "BTM","CEN","CCK","CLE","GEY","HOU","JRE","JRW","KAL","MAR",
