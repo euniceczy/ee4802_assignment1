@@ -111,7 +111,8 @@ st.write('Selected Lease Year is ', selected_lease)
 
 #BUTTON TO CONFIRM
 predict_button=0
-st.header('Predict HDB Resale Price for ', selected_yymm, "period, ", selected_town, " ", selected_fa, "SQM, ", selected_flat_type," ",selected_flat_model," ",selected_storey_range, "storey ", selected_lease, "lease?")
+# st.header('Predict HDB Resale Price for ', selected_yymm, "period, ", selected_town, " ", selected_fa, "SQM, ", selected_flat_type," ",selected_flat_model," ",selected_storey_range, "storey ", selected_lease, "lease?")
+st.write('Predict HDB Resale Price for ', selected_yymm, "period, ", selected_town, " ", selected_fa, "SQM, ", selected_flat_type," ",selected_flat_model," ",selected_storey_range, "storey ", selected_lease, "lease?")
 if st.button('Predict'):
     predict_button=1;
 
