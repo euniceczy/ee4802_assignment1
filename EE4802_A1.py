@@ -81,6 +81,7 @@ m = folium.Map(location=[lat, lon], zoom_start=12)
 folium.Marker([lat, lon]).add_to(m)
 folium.Circle([lat, lon], radius=radius).add_to(m)  # radius is in meters
 folium_static(m)
+st.write('*Map shown is an estimated radius of the Town selected*')
 
 #SELECTED FA
 selected_fa = st.number_input('Floor Area in Sqm',100.00)
