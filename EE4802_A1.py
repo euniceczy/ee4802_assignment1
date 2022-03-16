@@ -89,7 +89,6 @@ min_fa=df2["floor_area_sqm"].min()
 max_fa=df2["floor_area_sqm"].max()
 selected_fa = st.slider("Select Floor Area (sqm) for prediction ", int(min_fa),int(max_fa),100) # floor area
 st.write('Selected Floor Area in SQM is ', selected_fa)
-st.write('Selected Floor Area in SQM is ', selected_fa)
 
 #SELECTED FLAT TYPE
 flat_type = df2.flat_type.unique()
