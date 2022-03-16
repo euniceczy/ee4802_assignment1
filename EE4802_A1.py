@@ -86,7 +86,6 @@ st.write('*Map shown is an estimated radius of the Town selected*')
 #SELECTED FA
 selected_fa = st.number_input('Floor Area in Sqm',100.00)
 st.write('Selected Floor Area in SQM is ', selected_fa)
-# st.write('Predicting for ', selected_town, 'with ', selected_fa, 'SQM ...')
 
 #SELECTED FLAT TYPE
 flat_type = df2.flat_type.unique()
@@ -112,9 +111,8 @@ st.write('Selected Lease Year is ', selected_lease)
 
 #BUTTON TO CONFIRM
 predict_button=0
-st.write('Predict HDB Resale Price for ', selected_yymm, "period, ", selected_town, " ", selected_fa, "SQM, ", selected_flat_type," ",selected_flat_model," ",selected_storey_range, "storey ", selected_lease, "lease")
+st.header('Predict HDB Resale Price for ', selected_yymm, "period, ", selected_town, " ", selected_fa, "SQM, ", selected_flat_type," ",selected_flat_model," ",selected_storey_range, "storey ", selected_lease, "lease?")
 if st.button('Predict'):
-#     st.write('Predicted HDB Resale Price is: ')
     predict_button=1;
 
 trim_data = df2.drop(["block", "street_name", "remaining_lease"], axis=1)
@@ -188,12 +186,12 @@ input[encoded_town] = 1 #set town to ENCODED selected
 input[encoded_flat_model] = 1 #set flat model to Standard
 input[49] = selected_fa #set floor area to 80 sqm
 input[50] = selected_lease #set lease commencement to 2001
-print("Estimated resale price (linear regression)=> ", lr.predict([input]))
+# print("Estimated resale price (linear regression)=> ", lr.predict([input]))
 if predict_button==1:
       st.success("Success!")
       estimated_price = lr.predict([input])
       estimated_price = estimated_price[0]
-      st.subheader('Predicted HDB Resale Price is **SGD$%0.2f**' % estimated_price)
+      st.header('Predicted HDB Resale Price is **SGD$%0.2f**' % estimated_price)
 
 # col_name = ["month","type","storey","AMK","BED","BIS","BBT","BMH","BPJ",
 #  "BTM","CEN","CCK","CLE","GEY","HOU","JRE","JRW","KAL","MAR",
