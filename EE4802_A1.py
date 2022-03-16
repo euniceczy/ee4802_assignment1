@@ -84,7 +84,11 @@ folium_static(m)
 st.write('*Map shown is an estimated radius of the Town selected*')
 
 #SELECTED FA
-selected_fa = st.number_input('Floor Area in Sqm',100.00)
+# selected_fa = st.number_input('Floor Area in Sqm',100.00)
+min_fa=df2["floor_area_sqm"].min()
+max_fa=df2["floor_area_sqm"].max()
+selected_fa = st.slider("Select Floor Area (sqm) for prediction ", int(min_fa),int(max_fa),100) # floor area
+st.write('Selected Floor Area in SQM is ', selected_fa)
 st.write('Selected Floor Area in SQM is ', selected_fa)
 
 #SELECTED FLAT TYPE
