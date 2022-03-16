@@ -156,7 +156,7 @@ encoded_flat_type = int(encoded_flat_type[0][0])
 encoder = OrdinalEncoder()
 encoder.fit_transform(df2[["town"]])
 encoded_town = encoder.transform([[selected_town]])
-encoded_town=int(encoded_town[0][0])
+encoded_town=int(encoded_town[0][0])+3
 # #We have converted the storey_range from non-numerical to numerical data
 
 #ORDINAL ENCODER FOR FLAT MODEL
