@@ -193,11 +193,7 @@ if predict_button==1:
       st.success("Success!")
       estimated_price = lr.predict([input])
       estimated_price = estimated_price[0]
-      st.header('Predicted HDB Resale Price is **SGD$%0.2f**' % estimated_price)
-#       st.write('The estimate is ', estimated_price)
-#     st.success("Success!")
-#     st.write('The estimate is ', lr.predict([input]))
-#     predict_button=0
+      st.subheader('Predicted HDB Resale Price is **SGD$%0.2f**' % estimated_price)
 
 # col_name = ["month","type","storey","AMK","BED","BIS","BBT","BMH","BPJ",
 #  "BTM","CEN","CCK","CLE","GEY","HOU","JRE","JRW","KAL","MAR",
