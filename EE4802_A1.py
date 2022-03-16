@@ -38,7 +38,7 @@ elif selected_town == 'BUKIT PANJANG':
 elif selected_town =='BUKIT TIMAH': 
     lat, lon = 1.3294, 103.8021
 elif selected_town =='CENTRAL AREA':
-    lat, lon = 1.2989, 103.8455
+    lat, lon = 1.3048, 103.8318
 elif selected_town == 'CHOA CHU KANG':
     lat, lon = 1.3840, 103.7470
 elif selected_town == 'CLEMENTI':
