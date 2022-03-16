@@ -14,7 +14,7 @@ df2 = pd.read_csv('https://raw.githubusercontent.com/euniceczy/ee4802_assignment
 st.title("EE4802 Assignment 1 HDB Price Prediction")
 
 #SELECTED SELLING YY-MM
-selected_yymm = st.text_input('Type in Selling Month in YYYY-MM format between 2017-01 to 2022-3','2017-01')
+selected_yymm = st.text_input('Type in Selling Month in YYYY-MM format between 2017-01 to 2022-03','2017-01')
 st.write('Selected Time Period is', selected_yymm)
 
 #SELECTED TOWN
