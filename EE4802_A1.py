@@ -129,7 +129,8 @@ if predict_button==1:
       st.success("Success!")
       estimated_price = lr.predict([input])
       estimated_price = estimated_price[0]
-      st.write('The estimate is ', estimated_price)
+      st.header('Predicted HDB Resale Price is **SGD$%0.2f**' % estimated_price)
+#       st.write('The estimate is ', estimated_price)
 #     st.success("Success!")
 #     st.write('The estimate is ', lr.predict([input]))
 #     predict_button=0
