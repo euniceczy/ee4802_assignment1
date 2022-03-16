@@ -19,6 +19,66 @@ towns = df2.town.unique()
 selected_town = st.selectbox("Select Town for prediction", towns)
 st.write('Selected Town is ', selected_town)
 
+# MAP OF TOWN
+if selected_town=='ANG MO KIO':
+    lat, lon = 1.3691, 103.8454
+elif selected_town == 'BISHAN':
+    lat, lon = 1.3526, 103.8352
+elif selected_town == 'BEDOK':
+    lat, lon = 1.3236, 103.9273
+elif selected_town == 'BUKIT BATOK':
+    lat, lon = 1.3590, 103.7637
+elif selected_town == 'BUKIT MERAH':
+    lat, lon = 1.2819, 103.8239
+elif selected_town == 'BUKIT PANJANG':
+    lat, lon = 1.3774, 103.7719
+elif selected_town =='BUKIT TIMAH': 
+    lat, lon = 1.3294, 103.8021
+elif selected_town =='CENTRAL AREA':
+    lat, lon = 1.2989, 103.8455
+elif selected_town == 'CHOA CHU KANG':
+    lat, lon = 1.3840, 103.7470
+elif selected_town == 'CLEMENTI':
+    lat, lon = 1.3162, 103.7649
+elif selected_town == 'GEYLANG':
+    lat, lon = 1.3201, 103.8918
+elif selected_town =='HOUGANG':
+    lat, lon = 1.3612, 103.8863
+elif selected_town =='JURONG EAST':
+    lat, lon = 1.3329, 103.7436
+elif selected_town =='JURONG WEST': 
+    lat, lon = 1.3404, 103.7090
+elif selected_town =='KALLANG/WHAMPOA':
+    lat, lon = 1.3100, 103.8651
+elif selected_town == 'MARINE PARADE':
+    lat, lon =1.3020, 103.8971
+elif selected_town == 'PASIR RIS':
+    lat, lon =1.3721,103.9474
+elif selected_town == 'PUNGGOL':
+    lat, lon =1.3984, 103.9072
+elif selected_town == 'QUEENSTOWN':
+    lat, lon = 1.2942, 103.7861
+elif selected_town == 'SEMBAWANG':
+    lat, lon =1.4491,103.8185
+elif selected_town == 'SENGKANG':
+    lat, lon =1.3868, 103.8914
+elif selected_town == 'SERANGOON':
+    lat, lon =1.3554, 103.8679
+elif selected_town =='TAMPINES':
+    lat, lon =1.3496,103.9568
+elif selected_town =='TOA PAYOH':
+    lat, lon =1.3343, 103.8563
+elif selected_town == 'WOODLANDS':
+    lat, lon =1.4382, 103.7890
+elif selected_town == 'YISHUN':
+    lat, lon =1.4304, 103.8354
+
+radius = 3000
+m = folium.Map(location=[lat, lon], zoom_start=12)
+folium.Marker([lat, lon]).add_to(m)
+folium.Circle([lat, lon], radius=radius).add_to(m)  # radius is in meters
+folium_static(m)
+
 #SELECTED FA
 selected_fa = st.number_input('Floor Area in Sqm',100.00)
 st.write('Selected Floor Area in SQM is ', selected_fa)
